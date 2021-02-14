@@ -11,23 +11,21 @@ int main(int argc) {
 	counter = 1;
 	i=0;
 
-	printf("Please, enter the string to compress\n");
+	printf("Please, enter string to compress:\t");
 	gets(inputString);
 	
-	printf("Compressed string: ");
+	printf("Compressed string:\t");
 	while(1) {
 		if(i+1==strlen(inputString)) {
 			putchar(inputString[i]);
-			if(counter!=1)
-				printf("%d", counter);
+			printf("%d", counter);
 			break;
 		}
 		else if(inputString[i]==inputString[i+1]) {
 			++counter;
 		} else if(inputString[i]!=inputString[i+1]) {
 			putchar(inputString[i]);
-			if(counter!=1)
-				printf("%d", counter);
+			printf("%d", counter);
 			counter = 1;
 		}
 		++i;
